@@ -1,38 +1,48 @@
 <template>
   <div>
     <aside class="menu">
-      <p class="menu-label">General</p>
+      <p class="menu-label">Category</p>
       <ul class="menu-list">
-        <li><a>Dashboard</a></li>
-        <li><a>Customers</a></li>
-      </ul>
-      <p class="menu-label">Administration</p>
-      <ul class="menu-list">
-        <li><a>Team Settings</a></li>
-        <li>
-          <a class="is-active">Manage Your Team</a>
-          <ul>
-            <li><a>Members</a></li>
-            <li><a>Plugins</a></li>
-            <li><a>Add a member</a></li>
-          </ul>
+        <li v-for="menuItem in menuItems" :key="menuItem.index">
+          <a
+            v-bind:class="{ 'is-active': tabActive(menuItem.name) }"
+            v-bind:href="'/' + menuItem.name"
+          >
+            {{ menuItem.title }}
+          </a>
         </li>
-        <li><a>Invitations</a></li>
-        <li><a>Cloud Storage Environment Settings</a></li>
-        <li><a>Authentication</a></li>
-      </ul>
-      <p class="menu-label">Transactions</p>
-      <ul class="menu-list">
-        <li><a>Payments</a></li>
-        <li><a>Transfers</a></li>
-        <li><a>Balance</a></li>
       </ul>
     </aside>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["menuActive"],
+  data() {
+    return {
+      menuItems: [
+        {
+          name: "firstmenu",
+          title: "FirstMenu",
+        },
+        {
+          name: "secondmenu",
+          title: "SecondMenu",
+        },
+        {
+          name: "thirdmenu",
+          title: "ThirdMenu",
+        },
+      ],
+    };
+  },
+  methods: {
+    tabActive: function (tab) {
+      return this.menuActive === tab;
+    },
+  },
+};
 </script>
 
 <style></style>

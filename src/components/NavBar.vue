@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="navbar" role="navigation is-fixed-top">
+    <nav class="navbar is-info" role="navigation is-fixed-top">
       <div class="navbar-brand">
         <a class="navbar-item" href="#">
           <!-- <img

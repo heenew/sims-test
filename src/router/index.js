@@ -1,19 +1,32 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Dashboard from "../views/DashBoard";
+import MainContents from "../views/MainContents";
+import FirstMenu from "../views/FirstMenu";
+import SecondMenu from "../views/SecondMenu";
+import ThirdMenu from "../views/ThirdMenu";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "dashboard",
-    component: Dashboard,
+    name: "maincontents",
+    component: MainContents,
   },
   {
-    path: "/dashboard",
-    name: "dashboard",
-    component: Dashboard,
+    path: "/firstmenu",
+    name: "firstmenu",
+    component: FirstMenu,
+  },
+  {
+    path: "/secondmenu",
+    name: "secondmenu",
+    component: SecondMenu,
+  },
+  {
+    path: "/thirdmenu",
+    name: "thirdmenu",
+    component: ThirdMenu,
   },
 ];
 

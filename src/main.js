@@ -6,6 +6,9 @@ import store from "./store";
 import navBar from "./components/NavBar";
 Vue.component("app-navbar", navBar);
 
+import DashBoard from "./components/DashBoard";
+Vue.component("dash-board", DashBoard);
+
 import("@/assets/main.scss");
 
 Vue.config.productionTip = false;
