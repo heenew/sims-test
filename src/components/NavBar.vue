@@ -2,15 +2,6 @@
   <div>
     <nav class="navbar is-info" role="navigation is-fixed-top">
       <div class="navbar-brand">
-        <a class="navbar-item" href="#">
-          <!-- <img
-            src="https://bulma.io/images/bulma-logo.png"
-            width="112"
-            height="28"
-          /> -->
-          <b>SNET SYSTEMS</b>
-        </a>
-
         <a
           role="button"
           class="navbar-burger"
@@ -21,6 +12,14 @@
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
+        </a>
+        <a class="navbar-item" href="/">
+          <!-- <img
+            src="https://bulma.io/images/bulma-logo.png"
+            width="112"
+            height="28"
+          /> -->
+          <b>SNET SYSTEMS</b>
         </a>
       </div>
 
@@ -70,7 +69,7 @@
 
 <script>
 export default {
-  name: "HeaDer",
+  name: "Header",
 };
 </script>
 
