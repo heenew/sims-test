@@ -16,9 +16,6 @@ export default {
     // LineChart,
     // Spreadsheet,
   },
-  data() {
-    return {};
-  },
 };
 </script>
 
